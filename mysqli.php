@@ -7,14 +7,14 @@
 function mysqli_connect($server, $usuario, $password){
 	return mysql_connect($server ,$usuario, $password);
 }
-function mysqli_select_db($link, $bd ){
-	return mysql_select_db($bd, $link);
+function mysqli_select_db($con, $bd ){
+	return mysql_select_db($bd, $con);
 }
-function mysqli_errno($cxn){
-	return mysql_errno($cxn);
+function mysqli_errno($con){
+	return mysql_errno($con);
 }
-function mysqli_error($cxn){
-	return mysql_error($cxn);
+function mysqli_error($con){
+	return mysql_error($con);
 	}
 function mysqli_fetch_array($result){
 	return mysql_fetch_array($result);
@@ -25,19 +25,22 @@ function mysqli_fetch_assoc($result){
 function mysqli_fetch_row($result){	
 	return mysql_fetch_row($result);
 }
-function mysqli_insert_id($cxn){	
-	return mysql_insert_id($cxn);
+function mysqli_insert_id($con){	
+	return mysql_insert_id($con);
 }
 function mysqli_num_rows($result){	
 	return mysql_num_rows($result);
 }
-function mysqli_query($cxn,$sql){ 
-	return mysql_query($sql,$cxn);
+function mysqli_query($con,$sql){ 
+	return mysql_query($sql,$con);
 }
-function mysqli_real_escape_string($cxn,$data){
+function mysqli_real_escape_string($con,$data){
 	return mysql_real_escape_string($data);
 }
-function mysqli_close() {
-	return mysql_close();
+function mysqli_affected_rows(){
+	return mysql_affected_rows();
+}
+function mysqli_close($con) {
+	return mysql_close($con);
 }
 ?>
