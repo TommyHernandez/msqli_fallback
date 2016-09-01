@@ -37,8 +37,8 @@ function mysqli_query($con,$sql){
 function mysqli_real_escape_string($con,$data){
 	return mysql_real_escape_string($data);
 }
-function mysqli_affected_rows(){
-	return mysql_affected_rows();
+function mysqli_affected_rows($con){
+	return mysql_affected_rows($con);
 }
 function mysqli_close($con) {
 	return mysql_close($con);
